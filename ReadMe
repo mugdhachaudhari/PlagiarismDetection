@@ -1,0 +1,15 @@
+You need to download NLP package from http://stanfordnlp.github.io/CoreNLP/ before running this code.
+How code works ?
+•	Copy POS.csv and stopWordList files to location where java code resides.
+
+•	Need to install wordnet from Princeton wordnet link [4]. Specify path where wordnet is installed in class WordNetDet in variable ‘wnhome’.
+
+•	Run CollectData class. Enter input folder value as folder name (Only name) where all source (set of registered) documents resides.  Source folder should be present where java code resides. It will create all sub-indexes.
+
+•	Run GenerateIndex class. It will create MergeOut_* files in folder where java code resides.
+
+•	Run DetectPlagiarism class. Enter MergeOut_* folder name with highest index. This folder would be created where java code resides after runnin GenerateIndex class. 
+•	Enter suspicious folder name and suspicious file name.
+
+•	Run Semantic class. Enter source folder name, suspicious folder name, source file name and suspicious file name. It will open window to display source and suspicious documents where suspected plagiarized sentences would be highlighted in both documents. 
+
